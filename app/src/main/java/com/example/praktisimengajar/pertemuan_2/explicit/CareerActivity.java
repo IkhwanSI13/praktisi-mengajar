@@ -1,10 +1,17 @@
 package com.example.praktisimengajar.pertemuan_2.explicit;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.praktisimengajar.R;
@@ -12,6 +19,23 @@ import com.example.praktisimengajar.R;
 
 public class CareerActivity extends AppCompatActivity implements View.OnClickListener {
 
+    static String result1 = "Result1";
+
+    TextView tvResult;
+    ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent intent = result.getData();
+                        if (intent != null) {
+                            tvResult.setText(getString(R.string.result_ok, intent.getStringExtra(result1)));
+                        }
+                    } else {
+                        tvResult.setText(R.string.result_not_ok);
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +44,18 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
 
         Button buttonNavigation = findViewById(R.id.btn_navigation);
         buttonNavigation.setOnClickListener(this);
-        Button buttonNavigationPrimitif = findViewById(R.id.btn_navigation_primitif);
-        buttonNavigationPrimitif.setOnClickListener(this);
+        Button buttonNavigationPrimitive = findViewById(R.id.btn_navigation_primitif);
+        buttonNavigationPrimitive.setOnClickListener(this);
         Button buttonNavigationObject = findViewById(R.id.btn_navigation_object);
         buttonNavigationObject.setOnClickListener(this);
         Button buttonNavigationResult = findViewById(R.id.btn_navigation_result);
         buttonNavigationResult.setOnClickListener(this);
+        tvResult = findViewById(R.id.tv_result);
 
         Button buttonSend = findViewById(R.id.btn_action_send);
         buttonSend.setOnClickListener(this);
+        Button buttonView = findViewById(R.id.btn_action_view);
+        buttonView.setOnClickListener(this);
     }
 
     @Override
@@ -49,9 +76,17 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
             intent.putExtra(DetailCareerActivity.param2, myCareer);
             startActivity(intent);
         } else if (view.getId() == R.id.btn_navigation_result) {
-
+            mStartForResult.launch(new Intent(this, DetailCareerActivity.class));
         } else if (view.getId() == R.id.btn_action_send) {
-
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, "Hallo saya share ke sosial media");
+            intent.setType("text/plain");
+            startActivity(Intent.createChooser(intent, "Share to :"));
+        } else if (view.getId() == R.id.btn_action_view) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            String url = "https://www.yukngoding.id/me/img/pp.jpg";
+            intent.setDataAndType(Uri.parse(url), "image/*");
+            startActivity(Intent.createChooser(intent, "View with :"));
         }
     }
 }

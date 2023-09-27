@@ -77,4 +77,25 @@
         app:layout_constraintTop_toBottomOf="@id/tv_header_object"
         tools:text="Value dari intent di sini" />
 
+    <TextView
+        android:id="@+id/tv_header_waiting_for_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Value dari intent menunggu result"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_object" />
+
+    <Button
+        android:id="@+id/btn_desc_waiting_for_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Kirim result"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_header_waiting_for_result" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
