@@ -1,13 +1,11 @@
 package com.example.praktisimengajar.pertemuan_2.explicit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.praktisimengajar.R;
 
@@ -21,23 +19,23 @@ public class DetailCareerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_career);
 
-        /// Code for navigation, navigation with primitive data
-        TextView textViewPrimitive = findViewById(R.id.tv_desc_primitive);
+        /// Code for navigation, navigation with data
+        TextView tvData = findViewById(R.id.tv_desc_data);
         String value1 = getIntent().getStringExtra(param1);
         if (value1 != null) {
-            textViewPrimitive.setText(value1);
+            tvData.setText(value1);
         } else {
             // textView.setText("Kosong");
-            textViewPrimitive.setText(R.string.empty);
+            tvData.setText(R.string.empty);
         }
 
         /// Code for navigation with object
-        TextView textViewObject = findViewById(R.id.tv_desc_object);
+        TextView tvObject = findViewById(R.id.tv_desc_object);
         Career myCareer = (Career) getIntent().getSerializableExtra(param2);
         if (myCareer != null) {
-            textViewObject.setText("Career id: " + myCareer.id + "\nCareer name: " + myCareer.name);
+            tvObject.setText("Career id: " + myCareer.id + "\nCareer name: " + myCareer.name);
         } else {
-            textViewObject.setText(R.string.empty);
+            tvObject.setText(R.string.empty);
         }
 
         /// Code for navigation with result for previous activity

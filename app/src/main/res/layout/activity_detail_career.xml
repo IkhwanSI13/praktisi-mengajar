@@ -40,14 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Value dari intent - kosong atau primitive"
+        android:text="@string/value_from_intent_empty_or_not"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/iv_header" />
 
     <TextView
-        android:id="@+id/tv_desc_primitive"
+        android:id="@+id/tv_desc_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -61,11 +61,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Value dari intent - object"
+        android:text="@string/value_from_intent_object"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/tv_desc_primitive" />
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_data" />
 
     <TextView
         android:id="@+id/tv_desc_object"
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Value dari intent menunggu result"
+        android:text="@string/intent_waiting_for_result"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/guideline"
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Kirim result"
+        android:text="@string/send_result"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_header_waiting_for_result" />

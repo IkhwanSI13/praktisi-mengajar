@@ -5,4 +5,16 @@
     <string name="empty">Kosong</string>
     <string name="result_not_ok">RESULT_NOT_OK</string>
     <string name="result_ok">RESULT_OK: %1$s</string>
+    <string name="explicit_intent">Explicit Intent</string>
+    <string name="navigation_without_data">Navigasi tanpa data</string>
+    <string name="navigation_with_data">Navigasi dengan data</string>
+    <string name="naivigation_with_object">Navigasi dengan object</string>
+    <string name="navigate_by_waiting_for_results">Navigasi dengan menunggu result</string>
+    <string name="implicit_intent">Implicit Intent</string>
+    <string name="action_send">ACTION_SEND</string>
+    <string name="action_view">ACTION_VIEW</string>
+    <string name="value_from_intent_empty_or_not">Value dari intent - kosong atau dengan data</string>
+    <string name="value_from_intent_object">Value dari intent - object</string>
+    <string name="intent_waiting_for_result">Intent menunggu result</string>
+    <string name="send_result">Kirim result</string>
 </resources>

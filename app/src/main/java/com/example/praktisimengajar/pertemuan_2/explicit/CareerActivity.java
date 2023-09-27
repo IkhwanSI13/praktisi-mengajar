@@ -44,8 +44,8 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
 
         Button buttonNavigation = findViewById(R.id.btn_navigation);
         buttonNavigation.setOnClickListener(this);
-        Button buttonNavigationPrimitive = findViewById(R.id.btn_navigation_primitif);
-        buttonNavigationPrimitive.setOnClickListener(this);
+        Button buttonNavigationData = findViewById(R.id.btn_navigation_data);
+        buttonNavigationData.setOnClickListener(this);
         Button buttonNavigationObject = findViewById(R.id.btn_navigation_object);
         buttonNavigationObject.setOnClickListener(this);
         Button buttonNavigationResult = findViewById(R.id.btn_navigation_result);
@@ -63,7 +63,7 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
         if (view.getId() == R.id.btn_navigation) {
             Intent intent = new Intent(this, DetailCareerActivity.class);
             startActivity(intent);
-        } else if (view.getId() == R.id.btn_navigation_primitif) {
+        } else if (view.getId() == R.id.btn_navigation_data) {
             Intent intent = new Intent(this, DetailCareerActivity.class);
             intent.putExtra(DetailCareerActivity.param1, "value1");
             startActivity(intent);

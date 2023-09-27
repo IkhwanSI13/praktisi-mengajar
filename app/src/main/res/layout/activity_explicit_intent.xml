@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Explicit Intent"
+                android:text="@string/explicit_intent"
                 android:textAlignment="center"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -61,18 +61,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="Navigasi tanpa data"
+                android:text="@string/navigation_without_data"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
                 app:layout_constraintTop_toBottomOf="@id/tv_explicit" />
 
             <Button
-                android:id="@+id/btn_navigation_primitif"
+                android:id="@+id/btn_navigation_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="Navigasi dengan data primitif"
+                android:text="@string/navigation_with_data"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
                 app:layout_constraintTop_toBottomOf="@id/btn_navigation" />
@@ -83,10 +83,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="Navigasi dengan object"
+                android:text="@string/naivigation_with_object"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
-                app:layout_constraintTop_toBottomOf="@id/btn_navigation_primitif" />
+                app:layout_constraintTop_toBottomOf="@id/btn_navigation_data" />
 
             <Button
                 android:id="@+id/btn_navigation_result"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="Navigasi dengan menunggu result"
+                android:text="@string/navigate_by_waiting_for_results"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
                 app:layout_constraintTop_toBottomOf="@id/btn_navigation_object" />
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Implicit Intent"
+                android:text="@string/implicit_intent"
                 android:textAlignment="center"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="ACTION_SEND"
+                android:text="@string/action_send"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
                 app:layout_constraintTop_toBottomOf="@id/tv_implicit" />
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
-                android:text="ACTION_VIEW"
+                android:text="@string/action_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_explicit"
                 app:layout_constraintTop_toBottomOf="@id/btn_action_send" />
