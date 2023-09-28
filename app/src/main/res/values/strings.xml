@@ -17,4 +17,5 @@
     <string name="value_from_intent_object">Value dari intent - object</string>
     <string name="intent_waiting_for_result">Intent menunggu result</string>
     <string name="send_result">Kirim result</string>
+    <string name="add">Tambah</string>
 </resources>
