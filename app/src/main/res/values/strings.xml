@@ -18,4 +18,18 @@
     <string name="intent_waiting_for_result">Intent menunggu result</string>
     <string name="send_result">Kirim result</string>
     <string name="add">Tambah</string>
+    <string name="kosong_nih">Kosong nih</string>
+    <string name="intent">Intent</string>
+    <string name="lifecycle_amp_savestate"><![CDATA[Lifecycle & SaveState]]></string>
+    <string name="recyclerview_linear">RecyclerView Linear</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="recyclerview_linear_horizontal">RecyclerView Linear Horizontal</string>
+    <string name="linear_vertical">Linear - Vertical</string>
+    <string name="linear_horizontal">Linear - Horizontal</string>
+    <string name="recyclerview_grid_vertical">RecyclerView Grid Vertical</string>
+    <string name="grid_vertical">Grid - Vertical</string>
+    <string name="grid_horizontal">Grid - Horizontal</string>
+    <string name="staggered_vertical">Staggered - Vertical</string>
+    <string name="kumpulan_contoh_code">Kumpulan contoh code</string>
+    <string name="recyclerview_staggered">RecyclerView Staggered</string>
 </resources>

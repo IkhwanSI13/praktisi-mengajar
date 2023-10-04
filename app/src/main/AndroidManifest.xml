@@ -13,7 +13,34 @@
         android:theme="@style/Theme.PraktisiMengajar"
         tools:targetApi="31">
         <activity
-            android:name=".pertemuan_2.lifecycle.LifecycleActivity"
+            android:name=".recyclerView.staggered.RvStaggeredActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.gridHorizontal.RvGridHorizontalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.grid.RvGridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.linearHorizontal.RvLinearHorizontalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.linear.RvLinearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lifecycle.LifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.DetailCareerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.CareerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,15 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".pertemuan_2.explicit.DetailCareerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan_2.explicit.CareerActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
     </application>
 
 </manifest>

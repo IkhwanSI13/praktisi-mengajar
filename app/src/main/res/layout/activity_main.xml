@@ -6,13 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/android"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kumpulan_contoh_code"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/iv_title"
+        app:layout_constraintTop_toBottomOf="@id/iv_title" />
+
+    <Button
+        android:id="@+id/btn_intent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/intent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <Button
+        android:id="@+id/btn_lifecycle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/lifecycle_amp_savestate"
+        app:layout_constraintEnd_toEndOf="@id/btn_intent"
+        app:layout_constraintStart_toStartOf="@id/iv_title"
+        app:layout_constraintTop_toBottomOf="@id/btn_intent" />
+
+    <Button
+        android:id="@+id/btn_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/recyclerview"
+        app:layout_constraintEnd_toEndOf="@id/btn_intent"
+        app:layout_constraintStart_toStartOf="@id/iv_title"
+        app:layout_constraintTop_toBottomOf="@id/btn_lifecycle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

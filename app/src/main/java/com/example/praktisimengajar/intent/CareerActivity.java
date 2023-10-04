@@ -1,4 +1,4 @@
-package com.example.praktisimengajar.pertemuan_2.explicit;
+package com.example.praktisimengajar.intent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,14 +22,17 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
     static String result1 = "Result1";
 
     TextView tvResult;
-    ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+    ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent intent = result.getData();
                         if (intent != null) {
-                            tvResult.setText(getString(R.string.result_ok, intent.getStringExtra(result1)));
+                            String data = intent.getStringExtra(result1);
+                            String wording = getString(R.string.result_ok, data);
+                            tvResult.setText(wording);
                         }
                     } else {
                         tvResult.setText(R.string.result_not_ok);
@@ -40,7 +43,7 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explicit_intent);
+        setContentView(R.layout.activity_carrer);
 
         Button buttonNavigation = findViewById(R.id.btn_navigation);
         buttonNavigation.setOnClickListener(this);
@@ -76,7 +79,8 @@ public class CareerActivity extends AppCompatActivity implements View.OnClickLis
             intent.putExtra(DetailCareerActivity.param2, myCareer);
             startActivity(intent);
         } else if (view.getId() == R.id.btn_navigation_result) {
-            mStartForResult.launch(new Intent(this, DetailCareerActivity.class));
+            Intent intent = new Intent(this, DetailCareerActivity.class);
+            mStartForResult.launch(intent);
         } else if (view.getId() == R.id.btn_action_send) {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_TEXT, "Hallo saya share ke sosial media");

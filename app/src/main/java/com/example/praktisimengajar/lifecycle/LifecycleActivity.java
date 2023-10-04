@@ -1,4 +1,4 @@
-package com.example.praktisimengajar.pertemuan_2.lifecycle;
+package com.example.praktisimengajar.lifecycle;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -32,10 +32,10 @@ public class LifecycleActivity extends AppCompatActivity {
             tvCount.setText(String.valueOf(count));
         });
 
-        if (savedInstanceState != null) {
-            count = savedInstanceState.getInt(KEY_COUNT, 0);
-            tvCount.setText(String.valueOf(count));
-        }
+//        if (savedInstanceState != null) {
+//            count = savedInstanceState.getInt(KEY_COUNT, 0);
+//            tvCount.setText(String.valueOf(count));
+//        }
     }
 
     @Override
@@ -81,11 +81,11 @@ public class LifecycleActivity extends AppCompatActivity {
         outState.putInt(KEY_COUNT, count);
     }
 
-//    @Override
-//    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-//        super.onRestoreInstanceState(savedInstanceState);
-//        count = savedInstanceState.getInt(KEY_COUNT, 0);
-//        tvCount.setText(String.valueOf(count));
-//    }
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        count = savedInstanceState.getInt(KEY_COUNT, 0);
+        tvCount.setText(String.valueOf(count));
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.praktisimengajar.pertemuan_2.explicit;
+package com.example.praktisimengajar.intent;
 
 import java.io.Serializable;
 
