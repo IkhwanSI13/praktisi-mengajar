@@ -65,4 +65,13 @@
         app:layout_constraintStart_toStartOf="@id/btn_rv_linear_vertical"
         app:layout_constraintTop_toBottomOf="@id/btn_rv_grid_horizontal" />
 
+    <Button
+        android:id="@+id/btn_rv_multiple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/multiple_item_view"
+        app:layout_constraintEnd_toEndOf="@id/btn_rv_linear_vertical"
+        app:layout_constraintStart_toStartOf="@id/btn_rv_linear_vertical"
+        app:layout_constraintTop_toBottomOf="@id/btn_rv_staggered" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

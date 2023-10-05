@@ -11,6 +11,7 @@ import com.example.praktisimengajar.recyclerView.grid.RvGridActivity;
 import com.example.praktisimengajar.recyclerView.gridHorizontal.RvGridHorizontalActivity;
 import com.example.praktisimengajar.recyclerView.linear.RvLinearActivity;
 import com.example.praktisimengajar.recyclerView.linearHorizontal.RvLinearHorizontalActivity;
+import com.example.praktisimengajar.recyclerView.multiple.SchoolActivity;
 import com.example.praktisimengajar.recyclerView.staggered.RvStaggeredActivity;
 
 public class RecyclerViewActivity extends AppCompatActivity {
@@ -43,6 +44,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
         Button btnStaggered = findViewById(R.id.btn_rv_staggered);
         btnStaggered.setOnClickListener(
                 v -> startActivity(new Intent(v.getContext(), RvStaggeredActivity.class))
+        );
+
+        Button btnMultiple = findViewById(R.id.btn_rv_multiple);
+        btnMultiple.setOnClickListener(
+                v -> startActivity(new Intent(v.getContext(), SchoolActivity.class))
         );
     }
 }

@@ -32,4 +32,6 @@
     <string name="staggered_vertical">Staggered - Vertical</string>
     <string name="kumpulan_contoh_code">Kumpulan contoh code</string>
     <string name="recyclerview_staggered">RecyclerView Staggered</string>
+    <string name="recyclerview_multiple">RecyclerView Multiple</string>
+    <string name="multiple_item_view">Multiple Item View</string>
 </resources>
