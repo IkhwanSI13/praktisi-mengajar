@@ -1,18 +1,18 @@
 package com.example.praktisimengajar.recyclerView.gridHorizontal;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.praktisimengajar.R;
-import com.example.praktisimengajar.recyclerView.linearHorizontal.FoodHorizontalAdapter;
 
-public class RvGridHorizontalActivity extends AppCompatActivity {
+public class RvGridHorizontalActivity extends AppCompatActivity implements OnItemClickListener {
 
     RecyclerView recyclerView;
 
-    FoodHorizontalAdapter foodHorizontalAdapter;
+    SampleAdapter sampleAdapter;
     String[] dataSet;
 
     @Override
@@ -23,9 +23,16 @@ public class RvGridHorizontalActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_food);
 
         initDataset();
-        foodHorizontalAdapter = new FoodHorizontalAdapter(dataSet);
+        sampleAdapter = new SampleAdapter(dataSet, this);
+//        sampleAdapter = new SampleAdapter(dataSet, new OnItemClickListener() {
+//            @Override
+//            public void onItemClick() {
+//                Log.e("Ikhwan","Log");
+//
+//            }
+//        });
 
-        recyclerView.setAdapter(foodHorizontalAdapter);
+        recyclerView.setAdapter(sampleAdapter);
     }
 
     private void initDataset() {
@@ -33,5 +40,10 @@ public class RvGridHorizontalActivity extends AppCompatActivity {
         for (int i = 0; i < 50; i++) {
             dataSet[i] = "Element #" + i;
         }
+    }
+
+    @Override
+    public void onItemClick() {
+        Log.e("Ikhwan","Log");
     }
 }
