@@ -34,4 +34,5 @@
     <string name="recyclerview_staggered">RecyclerView Staggered</string>
     <string name="recyclerview_multiple">RecyclerView Multiple</string>
     <string name="multiple_item_view">Multiple Item View</string>
+    <string name="retrofit">Retrofit</string>
 </resources>
