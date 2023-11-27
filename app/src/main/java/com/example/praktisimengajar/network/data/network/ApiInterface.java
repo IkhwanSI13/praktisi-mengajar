@@ -1,7 +1,7 @@
 package com.example.praktisimengajar.network.data.network;
 
-import com.example.praktisimengajar.network.data.model.PostComment;
-import com.example.praktisimengajar.network.data.model.Posts;
+import com.example.praktisimengajar.network.model.PostComment;
+import com.example.praktisimengajar.network.model.Posts;
 
 import java.util.List;
 

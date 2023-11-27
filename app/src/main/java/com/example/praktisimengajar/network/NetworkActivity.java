@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.praktisimengajar.R;
-import com.example.praktisimengajar.network.data.PostAdapter;
-import com.example.praktisimengajar.network.data.model.Posts;
+import com.example.praktisimengajar.network.model.Posts;
 import com.example.praktisimengajar.network.data.network.ApiClient;
 import com.example.praktisimengajar.network.data.network.ApiInterface;
 

@@ -1,4 +1,4 @@
-package com.example.praktisimengajar.network.data.model;
+package com.example.praktisimengajar.network.model;
 
 import java.io.Serializable;
 import java.lang.Integer;

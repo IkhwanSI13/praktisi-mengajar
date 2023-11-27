@@ -10,6 +10,7 @@ import com.example.praktisimengajar.intent.CareerActivity;
 import com.example.praktisimengajar.lifecycle.LifecycleActivity;
 import com.example.praktisimengajar.network.NetworkActivity;
 import com.example.praktisimengajar.recyclerView.RecyclerViewActivity;
+import com.example.praktisimengajar.room.RoomActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnRetrofit = findViewById(R.id.btn_retrofit);
         btnRetrofit.setOnClickListener(
                 v -> startActivity(new Intent(v.getContext(), NetworkActivity.class))
+        );
+
+        Button btnRoom = findViewById(R.id.btn_room);
+        btnRoom.setOnClickListener(
+                v -> startActivity(new Intent(v.getContext(), RoomActivity.class))
         );
     }
 }
